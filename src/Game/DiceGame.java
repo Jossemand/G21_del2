@@ -2,7 +2,7 @@ package Game;
 
 import java.util.Scanner;
 
-public class Game {
+public class DiceGame {
 public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Square[] board = new Square[11];
