@@ -6,20 +6,11 @@ import java.util.Scanner;
         Scanner input = new Scanner(System.in);
         Dice dice  = new Dice();
         private int position;
-        private int turnCounter = 1;
 
         public Player(String name) {
             this.name = name;
             this.position =  0;
         }
-
-        public void createPlayers() {
-            System.out.println("Enter name of player 1");
-            Player player1 = new Player(input.nextLine());
-            System.out.println("Enter name of player 2");
-            Player player2 = new Player(input.nextLine());
-        }
-
         public String getName() {
             return name;
         }
@@ -31,11 +22,6 @@ import java.util.Scanner;
         public void setPosition(int position) {
             this.position = position;
         }
-
-        public int getTurnCounter() {
-            return turnCounter;
-        }
-
         public boolean playTurn() {
             System.out.println("");
             System.out.println("Press enter for " + getName() + " to roll");

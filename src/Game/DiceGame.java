@@ -14,8 +14,8 @@ public static void main(String[] args) {
         System.out.println("Enter name of player 2");
         Player player2 = new Player(input.nextLine());
 
-        Account accountP1 = new Account(player1);
-        Account accountP2 = new Account(player2);
+        Account accountP1 = new Account();
+        Account accountP2 = new Account();
 
         while(!winCon.isWinnerIsFound()) {
             boolean extraTurn;

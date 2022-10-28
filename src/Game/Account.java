@@ -4,7 +4,7 @@ public class Account {
     private int balance;
 
 
-    public Account(Player player) {
+    public Account() {
         balance = 1000;
     }
     public int getBalance()  {
