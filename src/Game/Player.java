@@ -6,20 +6,10 @@ import java.util.Scanner;
         Scanner input = new Scanner(System.in);
         Dice dice  = new Dice();
         private int position;
-        private int turnCounter = 1;
-
         public Player(String name) {
             this.name = name;
             this.position =  0;
         }
-
-        public void createPlayers() {
-            System.out.println("Enter name of player 1");
-            Player player1 = new Player(input.nextLine());
-            System.out.println("Enter name of player 2");
-            Player player2 = new Player(input.nextLine());
-        }
-
         public String getName() {
             return name;
         }
@@ -31,20 +21,13 @@ import java.util.Scanner;
         public void setPosition(int position) {
             this.position = position;
         }
-
-        public int getTurnCounter() {
-            return turnCounter;
-        }
-
         public boolean playTurn() {
             System.out.println("");
             System.out.println("Press enter for " + getName() + " to roll");
             input.nextLine();
             dice.roll();
             System.out.println(getName() + " rolled " + dice.getSum());
-            System.out.println("before " + getName() + "'s position was " + getPosition());
             position = dice.getSum();
-            System.out.println("now its " +  getPosition());
 
             if (dice.getSum() == 10)
                 return true;
@@ -89,7 +72,7 @@ import java.util.Scanner;
                     break;
                 case  10:
                     System.out.println(player.getName() + " moves to " + square[8].getSquareName());
-                    System.out.println("You find youself sorrounded by werewolves that rob you. You lose " + Math.abs(square[8].getBalanceUpdate()) + "But get an extra turn");
+                    System.out.println("You find yourself surrounded by werewolves that rob you. You lose " + Math.abs(square[8].getBalanceUpdate()) + " ,but get an extra turn");
                     break;
                 case  11:
                     System.out.println(player.getName() + " moves to " + square[9].getSquareName());
