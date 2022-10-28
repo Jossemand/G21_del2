@@ -3,7 +3,7 @@ package Game;
 import java.util.Scanner;
 
 public class Game {
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Square[] board = new Square[11];
         Square.createSquares(board);
