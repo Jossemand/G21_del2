@@ -17,6 +17,7 @@ public static void main(String[] args) {
         Account accountP1 = new Account();
         Account accountP2 = new Account();
 
+
         while(!winCon.isWinnerIsFound()) {
             boolean extraTurn;
             do {
